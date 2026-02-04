@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sign.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<!-- Dark and Light theme  with Inveted color options-->
+<body class="light-theme">
+    <!-- Navigation -->
+    <nav>  
+        <div class="container">
+            <div class="header">
+                <div class="dropdown" id="langdropdown">
+                    <span class="global-icon">🌐</span>
+                    <span id="current-lang">English</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <ul class="dropdown-list">
+                    <li data-value="English">English</li>
+                    <li data-value="മലയാളം">മലയാളം</li>
+                    <li data-value="हिन्दी">हिन्दी</li>
+                    <li data-value="తెలుగు">తెలుగు</li>
+                    <li data-value="मराठी">मराठी</li>
+                    <li data-value="தமிழ்">தமிழ்</li>
+                    <li data-value="ଓଡ଼ିଆ">ଓଡ଼ିଆ</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="pehchaan-logo-blue.png" title="MeriPehchaan Logo"></a>
+    </div>
+    <!-- Main content starts -->
+    <main>
+        <div class="main-container">
+            <div class="box">
+                <h3>Sign up for<span>JanParichay</span></h3>
+                <!-- otp details -->
+                <div class="circle">
+                    <span class="x">Mobile No. <sup style="color: red; font-weight: bold;">*</sup></span>
+                    <div id="trigger" class="otpwala">
+                        <input name="Password" id="Password" type="password" required>
+                        <button id="verifyBtn" class="submit" onclick="generateOtp()">Generate OTP</button>
+                    </div>
+                    <div id="show" class="show hidden">
+                        <div class="otp-inputs">
+                            <input type="text" maxlength="1" class="otp">
+                            <input type="text" maxlength="1" class="otp">
+                            <input type="text" maxlength="1" class="otp">
+                            <input type="text" maxlength="1" class="otp">
+                        </div>
+                        <button class="sub" type="submit">Submit</button>
+                        <button class="resend">Resend</button>
+                        <button class="cancel" id="close">&#10006;</button>
+                    </div>
+                </div>
+                <!-- Otp details end here -->
+                <!--form input starts here -->
+                <div class="cont">
+                    <!-- Registration form details -->
+                    <form action="index.html">
+                        <div class="details">
+                            <span class="a">First Name <sup style="color: red; font-weight: bold;">*</sup></span>
+                            <input name="fname" id="name" type="name" required>
+                            <span class="b">Last Name (optional)</span>
+                            <input name="lname" id="lname" type="name">
+                            <span class="c">Date of Birth <sup style="color: red; font-weight: bold;">*</sup></span>
+                            <input name="Date" id="Date" type="date" required>
+                            <span class="d">Select Gender<sup style="color: red; font-weight: bold;">*</sup></span>
+                            <div class="tab-content">
+                                <select>
+                                    <option value="Select">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+                            <span class="e">Password <sup style="color: red; font-weight: bold;">*</sup></span>
+                            <input name="password" id="password" type="password" required><span id="togglepassword" class="eye" style="cursor: pointer;">👁️</span>
+                            <span class="f">Confirm Password <sup style="color: red; font-weight: bold;">*</sup></span>
+                            <input name="confirmpassword" id="confirmpassword" type="confirmpassword" required><span id="toggleconfirmpassword" class="eye" style="cursor: pointer;">👁️</span>
+                            <button class="jadu" onclick="genPassword()">Generate Password</button>
+                        </div>
+                        <div class="select">
+                            <label>
+                                <input id="termcheckbox" type="checkbox">I accept Terms and Conditions
+                            </label>
+                        </div>
+                        <button class="but" id="verifyBtn" disabled>Verify</button>
+                    </form>
+                </div>
+                    
+            <!-- Registration Page Link -->
+            <div class="new">                
+                <a href="index.html">Sign in to an Existing MeriPehchaan account</a>
+            </div>
+        </div>
+        <!-- Accessibility options  starts-->
+        <div class="access">
+            <!-- Accesibility button -->
+            <button id="acc-trigger" class="acc-fab">
+                <i class="fa-solid fa-universal-access"></i>
+                <span class="label">Accessibility Tools</span>
+            </button>
+            <!-- Accesibility content button -->
+            <div id="acc-menu" class="dabba hidden">
+                <div class="dabbame">
+                    <p>Accessibility Tools</p>
+                    <button id="close-menu" class="close-btn">X</button>
+                </div>
+                <div class="dabbamedabba">
+                    <button id="box1" class="box10">
+                            <i class="fa-solid fa-text-height"></i>
+                            <p>Bigger Text</p>
+                    </button>
+                    <button id="box1" class="box2">
+                        <i class="fa-solid fa-text-width"></i>
+                        <p>Text Spacing</p>
+                    </button>
+                    <button id="box1" class="box3">
+                        <i class="fa-solid fa-microphone"></i>
+                        <p>Text To Speech</p>
+                    </button>
+                    <button id="box1" class="box4">
+                        <i class="fa-solid fa-align-justify"></i>
+                        <p>Line Height</p>
+                    </button>
+                    <button id="box1" class="box5">
+                        <i class="fa-solid fa-link"></i>
+                        <p>Highlight Links</p>
+                    </button>
+                    <button id="box1" class="box6">
+                        <i class="fa-regular fa-image"></i>
+                        <p>Hide Image</p>
+                    </button>
+                    <button id="box1" class="box7">
+                        <i class="fa-solid fa-arrow-pointer"></i>
+                        <p>Cursor</p>
+                    </button>
+                    <button id="box1" class="box8">
+                        <i class="fa-regular fa-moon"></i>
+                        <p>Light-Dark</p>
+                    </button>
+                    <button id="box1" class="box9">
+                        <i class="fa-solid fa-droplet"></i>
+                        <p>Invert Colors</p>
+                    </button>
+                </div>
+                <button type="reset" class="btn2">Reset All Settings</button>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="sscript.js"></script>
+</html>

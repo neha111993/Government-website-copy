@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<!-- Dark and Light theme  with Inveted color options-->
+<body class="light-theme">
+    <!-- Navigation -->
+    <nav>  
+        <div class="container">
+            <div class="header">
+                <div class="dropdown" id="langdropdown">
+                    <span class="global-icon">🌐</span>
+                    <span id="current-lang">English</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <ul class="dropdown-list">
+                    <li data-value="English">English</li>
+                    <li data-value="മലയാളം">മലയാളം</li>
+                    <li data-value="हिन्दी">हिन्दी</li>
+                    <li data-value="తెలుగు">తెలుగు</li>
+                    <li data-value="मराठी">मराठी</li>
+                    <li data-value="தமிழ்">தமிழ்</li>
+                    <li data-value="ଓଡ଼ିଆ">ଓଡ଼ିଆ</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="pehchaan-logo-blue.png" title="MeriPehchaan Logo"></a>
+    </div>
+    <!-- Main content starts -->
+    <main>
+        <div class="main-container">
+            <div class="box">
+                <h3>Sign In to your Account via <br><span>JanParichay</span></h3>
+                <!-- dots hover links in main content right -->
+                <div class="circle" id="menudrop">
+                    <div class="head">
+                        <i title="menu" class="fa-duotone fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <ul class="dropdown-list1">
+                        <li><a href=""><i class="fa-slab fa-regular fa-address-card"></i> About Us</a></li>
+                        <li><a href=""><i class="fa-solid fa-right-to-bracket"></i> User Manual</a></li>
+                        <li><a href=""><i class="fa-solid fa-right-to-bracket"></i> JanParichay Offerings</a></li>
+                        <li><a href=""><i class="fa-solid fa-right-to-bracket"></i> Password Policy</a></li>
+                        <li><a href=""><i class="fa-solid fa-link"></i> Application Policy</a></li>
+                        <li><a href=""><i class="fa-sharp fa-solid fa-circle-question"></i> FAQ</a></li>
+                    </ul>
+                </div>
+                <!-- dot contents end here -->
+                <!-- Login options button -->
+                <div class="options">
+                    <button type="submit" class="btn active" onclick="openTab(event,'Username')">Username</button>
+                    <button type="submit" class="btn" onclick="openTab(event,'Mobile')">Mobile</button>
+                    <button type="submit" class="btn" onclick="openTab(event,'Others')">Others</button>
+                </div>
+                <!-- Login options button ends here -->
+                <!--form input starts here -->
+                <div class="cont">
+                    <div id="Username" class="tab-content" style="display: block;">
+                        <!-- Username form details -->
+                        <form action="">
+                            <div class="details">
+                                <span class="x">Enter Username <sup style="color: red; font-weight: bold;">*</sup></span>
+                                <input name="Username" id="Username" placeholder="Username" required>
+                                <span class="y">Enter Password <sup style="color: red; font-weight: bold;">*</sup></span>
+                                <input name="password" id="password" type="password" required><span id="togglePassword" class="eye" style="cursor: pointer;">👁️</span>
+                            </div>
+                            <div class="links">
+                                <a href="">Forget User Id</a>
+                                <a href="">Forgot Password</a>
+                            </div>
+                            <div class="select">
+                                <label>
+                                    <input type="checkbox">Password Less Authentication
+                                </label><br>
+                                <label>
+                                    <input type="checkbox" id="termcheckbox">I consent to MeriPehchaan <a href="">terms of use.</a>
+                                </label>
+                            </div>
+                            <button class="but" id="signinBtn">Sign In</button>
+                        </form>
+                    </div>
+                    <!-- Username form details end -->
+                     <!-- MObile form details -->
+                    <div id="Mobile" class="tab-content">
+                        <form action="#">
+                            <div class="details">
+                                <span class="x">Enter Mobile Number <sup style="color: red; font-weight: bold;">*</sup></span>
+                                <input name="Number" id="Number" required>
+                                <span class="y">Enter Password <sup style="color: red; font-weight: bold;">*</sup></span>
+                                <input name="password1" id="password1" type="password1" required><span id="togglePassword1" class="eye" style="cursor: pointer;">👁️</span>
+                            </div>
+                            <div class="links">
+                                <a href="">Forget User Id</a>
+                                <a href="">Forgot Password</a>
+                            </div>
+                            <div class="select">
+                                <label>
+                                    <input type="checkbox">Password Less Authentication
+                                </label><br>
+                                <label>
+                                    <input type="checkbox"  id="termcheckbox">I consent to MeriPehchaan <a href="">terms of use.</a>
+                                </label>
+                            </div>
+                            <button class="but" id="signinBtn">Sign In</button>
+                        </form>
+                    </div>
+                    <!-- Username form details ends -->
+                     <!-- Others form details -->
+                    <div id="Others" class="tab-content">
+                        <form action="#">
+                                <select id="id-type" onchange="toggleFields()">
+                                    <option value="email">Email</option>
+                                    <option value="govt-email">Govt Email Id</option>
+                                    <option value="aadhaar">Aadhaar</option>
+                                    <option value="pan">PAN</option>
+                                    <option value="dl">DL</option>
+                                </select>
+
+                                    <div id="email-fields" class="toggle-content">
+                                        <span>Enter Email <sup style="color: red; font-weight: bold;">*</sup></span>
+                                        <input name="Username" id="Username" required>
+                                        <span>Enter Password <sup style="color: red; font-weight: bold;">*</sup></span>
+                                        <input name="password2" id="password2" type="password2" required><span id="togglePassword2" class="eye" style="cursor: pointer;">👁️</span>
+                                    </div>
+                    
+                                    <div id="govt-email-fields" class="toggle-content" style="display:none;">
+                                        <span>Enter Govt Email Id<sup style="color: red; font-weight: bold;">*</sup></span>
+                                        <input name="Username" id="Username" required>
+                                        <span>Enter Password <sup style="color: red; font-weight: bold;">*</sup></span>
+                                        <input name="password3" id="password3" type="password3" required><span id="togglePassword3" class="eye" style="cursor: pointer;">👁️</span>
+                                    </div>
+
+                                    <div id="aadhaar-fields" class="toggle-content" style="display:none;">
+                                        <span>Enter Aadhaar <sup style="color: red; font-weight: bold;">*</sup></span>
+                                        <input name="Username" id="Username" required>
+                                    </div>
+
+                                    <div id="pan-fields" class="toggle-content" style="display:none;">
+                                        <span>Enter PAN<sup style="color: red; font-weight: bold;">*</sup></span>
+                                        <input name="Username" id="Username" required>
+                                        <span>Enter Password <sup style="color: red; font-weight: bold;">*</sup></span>
+                                        <input name="password4" id="password4" type="password4" required><span id="togglePassword4" class="eye" style="cursor: pointer;">👁️</span>
+                                    </div>
+
+                                    <div id="dl-fields" class="toggle-content" style="display:none;">
+                                        <span>Enter DL<sup style="color: red; font-weight: bold;">*</sup></span>
+                                        <input name="Username" id="Username" required>
+                                        <span>Enter Password <sup style="color: red; font-weight: bold;">*</sup></span>
+                                        <input name="password5" id="password5" type="password5" required><span id="togglePassword5" class="eye" style="cursor: pointer;">👁️</span>
+                                    </div>
+                            
+                            <div class="links">
+                                <a href="">Forget User Id</a>
+                                <a href="">Forgot Password</a>
+                            </div>
+                            <div class="select">
+                                <label>
+                                    <input type="checkbox">Password Less Authentication
+                                </label><br>
+                                <label>
+                                    <input type="checkbox"  id="termcheckbox">I consent to MeriPehchaan <a href="">terms of use.</a>
+                                </label>
+                            </div>
+                            <button class="but" id="signinBtn">Sign In</button>
+                        </form>
+                    </div>
+                    <!-- Username form details -->
+                </div>
+                <!--form input starts here -->
+                <hr>
+                <span class="or">OR</span>
+                <!-- apps option -->
+                <div class="display">
+                    <a href=""><img src="digiLocker_logo_01.png" title="Digilocker Logo"></a>
+                    <a href=""><img src="parichay_image.png" title="Parichay Logo"></a>
+                    <a href=""><img src="e-pramaan1.jpeg" title="Epramaan Logo"></a>
+                </div>
+            </div>
+            <!-- social icons -->
+            <div class="icons">
+                <a href="" title="Google"><i class="fa-brands fa-google"></i></a>
+                <a href="" title="Github"><i class="fa-brands fa-github"></i></a>
+                <a href="" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="" title="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <!-- Registration Page Link -->
+            <div class="new">                
+                New User? <a href="sign.html">Sign up for MeriPehchaan</a>
+            </div>
+        </div>
+        <!-- Accessibility options  starts-->
+        <div class="access">
+            <!-- Accesibility button -->
+            <button id="acc-trigger" class="acc-fab">
+                <i class="fa-solid fa-universal-access"></i>
+                <span class="label">Accessibility Tools</span>
+            </button>
+            <!-- Accesibility content button -->
+            <div id="acc-menu" class="dabba hidden">
+                <div class="dabbame">
+                    <p>Accessibility Tools</p>
+                    <button id="close-menu" class="close-btn">X</button>
+                </div>
+                <div class="dabbamedabba">
+                    <button id="box1" class="box10">
+                            <i class="fa-solid fa-text-height"></i>
+                            <p>Bigger Text</p>
+                    </button>
+                    <button id="box1" class="box2">
+                        <i class="fa-solid fa-text-width"></i>
+                        <p>Text Spacing</p>
+                    </button>
+                    <button id="box1" class="box3">
+                        <i class="fa-solid fa-microphone"></i>
+                        <p>Text To Speech</p>
+                    </button>
+                    <button id="box1" class="box4">
+                        <i class="fa-solid fa-align-justify"></i>
+                        <p>Line Height</p>
+                    </button>
+                    <button id="box1" class="box5">
+                        <i class="fa-solid fa-link"></i>
+                        <p>Highlight Links</p>
+                    </button>
+                    <button id="box1" class="box6">
+                        <i class="fa-regular fa-image"></i>
+                        <p>Hide Image</p>
+                    </button>
+                    <button id="box1" class="box7">
+                        <i class="fa-solid fa-arrow-pointer"></i>
+                        <p>Cursor</p>
+                    </button>
+                    <button id="box1" class="box8">
+                        <i class="fa-regular fa-moon"></i>
+                        <p>Light-Dark</p>
+                    </button>
+                    <button id="box1" class="box9">
+                        <i class="fa-solid fa-droplet"></i>
+                        <p>Invert Colors</p>
+                    </button>
+                </div>
+                <button type="reset" class="btn2">Reset All Settings</button>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
