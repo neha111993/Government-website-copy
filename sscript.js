@@ -117,3 +117,85 @@ trigger.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
   menu.classList.add('hidden');
 });
+
+
+// bigger text
+const biggertextBtn = document.getElementById('biggertextBtn');
+
+if(biggertextBtn)
+{
+    biggertextBtn.addEventListener('click', () =>
+    {
+        document.body.classList.toggle('bigger-text-active');
+    });
+}
+
+// text spacing
+const textspacingBtn = document.getElementById('textspacingBtn');
+
+if(textspacingBtn)
+{
+    textspacingBtn.addEventListener('click', () =>
+    {
+        document.body.classList.toggle('text-spacing-active');
+    });
+}
+
+// light height increase
+
+const lineheightBtn = document.getElementById('lineheightBtn');
+
+if(lineheightBtn)
+{
+    lineheightBtn.addEventListener('click', () =>
+    {
+        document.body.classList.toggle('extra-line-height');
+    });
+}
+
+
+// highlight link button
+
+const highlightBtn = document.getElementById('highlightlinkBtn');
+
+if(highlightBtn)
+{
+    highlightBtn.addEventListener('click', () =>
+    {
+        document.body.classList.toggle('highlight-active');
+    });
+}
+
+// hide image button
+
+const hideimageBtn = document.getElementById('hideimageBtn');
+
+if(hideimageBtn)
+{
+    hideimageBtn.addEventListener('click', () =>
+    {
+        document.body.classList.toggle('images-hidden');
+    });
+}
+
+// cursor logic
+
+document.addEventListener('DOMContentLoaded', () =>
+{
+    const cursorBtn = document.getElementById('cursorBtn');
+    if (cursorBtn)
+    {
+        cursorBtn.addEventListener('click', ()=>
+        {
+            document.body.classList.toggle('big-cursor-active');
+        });
+    }
+});
+
+// accessibility reset button
+const resetBtn = document.querySelector('.btn2');
+
+resetBtn.addEventListener('click', () =>
+{
+    document.body.classList.remove('extra-line-height','highlight-active', 'images-hidden', 'inverted-theme', 'dark-theme', 'big-cursor-active', 'text-spacing-active', 'bigger-text-active');
+});

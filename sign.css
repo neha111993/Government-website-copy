@@ -554,6 +554,7 @@ h3 span{
     color: var(--fontcolor);
     text-align: left;
     padding-left: 10px;
+    margin-top: -20px;
     margin-left: 10px;
     text-wrap: nowrap;
     width: 145px;
@@ -639,7 +640,7 @@ h3 span{
 .access{
     position: fixed;
     bottom: 20px;
-    right: 20px; 
+    right: 0; 
     z-index: 2;
 }
 .acc-fab {
@@ -719,7 +720,7 @@ h3 span{
     margin-bottom: 20px;
 }
 
-#box1{
+.box2{
     font-size: 12px;
     padding: 25px;
     border: none;
@@ -731,12 +732,194 @@ h3 span{
     color: var(--boxfontcolor);
     box-shadow: 0 0 30px rgba(0, 0, 0, .4);
 }
-#box1:hover{
+.box2:hover{
     background: #b8ddf5;
     border: 2px solid #0068ff;
     color: var(--navfontcolor);
     transition: all 0.2ms;
 }
+.box3{
+    font-size: 12px;
+    padding: 25px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: var(--boxback);
+    border: 2px solid var(--navbutton2);
+    cursor: pointer;
+    color: var(--boxfontcolor);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .4);
+}
+.box3:hover{
+    background: #b8ddf5;
+    border: 2px solid #0068ff;
+    color: var(--navfontcolor);
+    transition: all 0.2ms;
+}
+.box4{
+    font-size: 12px;
+    padding: 25px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: var(--boxback);
+    border: 2px solid var(--navbutton2);
+    cursor: pointer;
+    color: var(--boxfontcolor);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .4);
+}
+.box4:hover{
+    background: #b8ddf5;
+    border: 2px solid #0068ff;
+    color: var(--navfontcolor);
+    transition: all 0.2ms;
+}
+.box5{
+    font-size: 12px;
+    padding: 25px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: var(--boxback);
+    border: 2px solid var(--navbutton2);
+    cursor: pointer;
+    color: var(--boxfontcolor);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .4);
+}
+.box5:hover{
+    background: #b8ddf5;
+    border: 2px solid #0068ff;
+    color: var(--navfontcolor);
+    transition: all 0.2ms;
+}
+.box6{
+    font-size: 12px;
+    padding: 25px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: var(--boxback);
+    border: 2px solid var(--navbutton2);
+    cursor: pointer;
+    color: var(--boxfontcolor);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .4);
+}
+.box6:hover{
+    background: #b8ddf5;
+    border: 2px solid #0068ff;
+    color: var(--navfontcolor);
+    transition: all 0.2ms;
+}
+.box7{
+    font-size: 12px;
+    padding: 25px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: var(--boxback);
+    border: 2px solid var(--navbutton2);
+    cursor: pointer;
+    color: var(--boxfontcolor);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .4);
+}
+.box7:hover{
+    background: #b8ddf5;
+    border: 2px solid #0068ff;
+    color: var(--navfontcolor);
+    transition: all 0.2ms;
+}
+.box8{
+    font-size: 12px;
+    padding: 25px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: var(--boxback);
+    border: 2px solid var(--navbutton2);
+    cursor: pointer;
+    color: var(--boxfontcolor);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .4);
+}
+.box8:hover{
+    background: #b8ddf5;
+    border: 2px solid #0068ff;
+    color: var(--navfontcolor);
+    transition: all 0.2ms;
+}
+.box9{
+    font-size: 12px;
+    padding: 25px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: var(--boxback);
+    border: 2px solid var(--navbutton2);
+    cursor: pointer;
+    color: var(--boxfontcolor);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .4);
+}
+.box9:hover{
+    background: #b8ddf5;
+    border: 2px solid #0068ff;
+    color: var(--navfontcolor);
+    transition: all 0.2ms;
+}
+.box10{
+    font-size: 12px;
+    padding: 25px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: var(--boxback);
+    border: 2px solid var(--navbutton2);
+    cursor: pointer;
+    color: var(--boxfontcolor);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .4);
+}
+.box10:hover{
+    background: #b8ddf5;
+    border: 2px solid #0068ff;
+    color: var(--navfontcolor);
+    transition: all 0.2ms;
+}
+
+body.bigger-text-active{
+    font-size: 1.25em !important;
+}
+
+body.text-spacing-active{
+    letter-spacing: 2px !important;
+    word-spacing: 5px !important;
+}
+
+body.extra-line-height{
+    line-height: 2.5 !important;
+}
+
+.highlight-active a{
+    background-color: yellow !important;
+    color: black !important;
+}
+
+body.images-hidden img,
+body.images-hidden svg,
+body.images-hidden picture{
+    display: none !important;
+}
+
+body.big-cursor-active,
+body.big-cursor-active 
+{
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path d="M7 2l12 11.2l-5.8.5l3.3 7.3l-2.2 1l-3.2-7.4L7 19z" fill="black" stroke="white" stroke-width="1"/></svg>'), auto !important;
+}
+
+body.big-cursor-active a,
+body.big-cursor-active button,
+body.big-cursor-active input 
+{
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path d="M7 2l12 11.2l-5.8.5l3.3 7.3l-2.2 1l-3.2-7.4L7 19z" fill="black" stroke="white" stroke-width="1"/></svg>'), pointer !important;
+}
+
 .hidden { 
     display: none; 
 }
